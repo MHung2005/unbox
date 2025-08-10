@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hộp Quà Bí Mật</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .gift-box {
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .gift-box:hover {
+            transform: scale(1.1);
+        }
+        .gift-box img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            border: 5px solid #ffd700;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        #message.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="gift-box" onclick="showMessage()">
+        <img src="hopqua.jpg" alt="Hộp Quà">
+    </div>
+    <div id="message">Nói Hải cầm xạc tai nghe với tai nghe sang cho t với</div>
+    <script>
+        function showMessage() {
+            document.getElementById('message').classList.add('show');
+        }
+    </script>
+</body>
+</html>
